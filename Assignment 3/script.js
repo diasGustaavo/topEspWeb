@@ -50,11 +50,7 @@ input.addEventListener("keypress", addListAfterKeypress);
 // eventListener para todos os Li previamente definidos e para criar botoes de exclusao e seus eventListeners
 allLis.forEach(liElement => {
 	liElement.addEventListener("click", event => {
-		if (event.target.classList.contains('done')) {
-			event.target.classList.remove('done')
-		} else {
-			event.target.classList.add('done')
-		}
+		console.log("DEBUG: Li clicked!")
 	})
 
 	const buttonElement = document.createElement('button')
@@ -64,5 +60,16 @@ allLis.forEach(liElement => {
 
 	buttonElement.addEventListener("click", event => {
 		ul.removeChild(liElement)
+		console.log("DEBUG: Del button clicked!")
 	})
 })
+
+function aa() {
+	console.log("teste")
+}
+
+function bb() {
+	var a = "hello"
+}
+
+console.log(a)
